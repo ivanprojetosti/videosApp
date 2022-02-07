@@ -1,68 +1,31 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Videos App
-    </ion-title>
+    <ion-title> Videos App </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-searchbar placeholder="Procurar Filmes"></ion-searchbar>
 
-  <!-- <ion-item>
-    <ion-thumbnail slot="start">
-      <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fVzXp3NwovUlLe7fvoRynCmBPNc.jpg">
-      <ion-chip>
-        <ion-label color="secondary">84%</ion-label>
-      </ion-chip>
-    </ion-thumbnail>
-
-    <ion-label>
-      <div>
-          <h1>Homem-Aranha</h1>
+  <ion-list>
+    <ion-item lines="full">
+      <ion-thumbnail slot="start">
+        <img
+          src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9PbtCo5IIkd26WPQfZUpPyn6fTz.jpg"
+        />
+      </ion-thumbnail>
+      <ion-label class="ion-text-wrap">
+        <div class="descricao_informacoes_filmes">
+          <h1>Homem aranha</h1>
           <p>Sem Volta para Casa</p>
           <p>16/12/2021-(BR)</p>
           <p>2h 28m</p>
-
-      </div>
-    </ion-label>
-
-  </ion-item> -->
-  <ion-grid>
-        <ion-row class="ion-align-items-start">
-          <ion-col size="3">
-            <div>
-              <ion-item>
-                <ion-thumbnail slot="start">
-                  <img  src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9PbtCo5IIkd26WPQfZUpPyn6fTz.jpg">
-                  <ion-chip>
-                    <ion-label color="secondary">84%</ion-label>
-                  </ion-chip>
-                </ion-thumbnail>
-              </ion-item>
-            </div>
-          </ion-col>
-          <ion-col size="8">
-            <div>
-<ion-item>
-              <ion-label>
-                <div class="descricao_informacoes_filmes">
-                    <h1>Homem-Aranha</h1>
-                    <p>Sem Volta para Casa</p>
-                    <p>16/12/2021-(BR)</p>
-                    <p>2h 28m</p>
-
-                </div>
-                <!-- <ion-chip>
-                  <ion-label color="secondary">84%</ion-label>
-                </ion-chip> -->
-              </ion-label>
-
-            </ion-item>
-
-            </div>
-          </ion-col>
-        </ion-row>
-</ion-grid>
-
+          <br />
+        </div>
+      </ion-label>
+      <ion-chip color="success" outline>
+        <ion-label>85%</ion-label>
+      </ion-chip>
+    </ion-item>
+  </ion-list>
 </ion-content>

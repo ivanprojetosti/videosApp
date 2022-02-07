@@ -1,29 +1,58 @@
+// ion-item{
+//   h1 {
+//     color: black;
+//     font-weight: bolder;
+//     font-size: 1rem;
+//     // margin-top: -4px;
+//   }
+//   img{
+
+//   }
+//   p{
+//     font-weight: bolder;
+//     font-size: 0.75rem;
+//   }
+// ion-thumbnail{
+//   height: 100%;
+//   // margin-top: 10px;
+
+
+
+// }
+
+
+// }
+//   ion-row{
+//     border: 1px solid blue;
+//   }
+
+
+//   ion-col{
+//     // margin-left: 0px;
+//     // margin-right: 0px;
+//   }
+
 ion-item{
-  h1 {
-    color: black;
-    font-weight: bolder;
-    font-size: 1.3rem;
-    margin-top: -4px;
-  }
-  img{
+--padding-start:10px;
+--inner-padding-end:10px;
 
-  }
-  p{
-    font-weight: bolder;
-    font-size: 1rem;
-  }
 ion-thumbnail{
-  height: 100%;
-  margin-top: 10px;
-
-
-}
-ion-label{
-
+height: 100%;
 }
 
 
+h1{
+  font-weight: bold;
+  font-size: 1rem;
 }
-  ion-row{
-    border: 1px solid blue;
-  }
+p{
+  font-size: 0.7rem;
+}
+
+ion-chip{
+  padding-inline: 3px;
+}
+
+
+}
+
