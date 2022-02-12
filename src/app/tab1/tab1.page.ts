@@ -22,6 +22,7 @@ export class Tab1Page {
       classificacao: 80,
       cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fVzXp3NwovUlLe7fvoRynCmBPNc.jpg',
       generos: ['Ação', 'Aventura'],
+      pagina: '/mortal-kombat'
     },
     {
       nome: 'Megalodon',
@@ -30,6 +31,7 @@ export class Tab1Page {
       classificacao: 90,
       cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hES2eVAbVt08JJTqgu3jmI34Yxx.jpg',
       generos: ['Ação', 'Ficção', 'científica', 'Terror', 'CinemaTV'],
+      pagina: '/liga-justica'
     }
 
   ];
