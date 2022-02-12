@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Videos App </ion-title>
+    <ion-title>{{titulofilme}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -8,24 +8,24 @@
   <ion-searchbar placeholder="Procure seus filmes aqui"></ion-searchbar>
 
   <ion-list>
-    <ion-item-sliding>
+    <ion-item-sliding *ngFor="let filme of listaVideos">
       <ion-item lines="full">
         <ion-thumbnail slot="start">
-          <img
-            src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9PbtCo5IIkd26WPQfZUpPyn6fTz.jpg"
-          />
+          <img name="cartaz" [src]="filme.cartaz" />
         </ion-thumbnail>
         <ion-label class="ion-text-wrap">
           <div class="descricao_informacoes_filmes">
-            <h1>Homem aranha</h1>
-            <p>Sem Volta para Casa</p>
-            <p>16/12/2021-(BR)</p>
-            <p>2h 28m</p>
-            <br />
+            <h1 name="nome">{{filme.nome}}</h1>
+            <p name="lancamento">{{filme.lancamento}}</p>
+            <p name="duracao">{{filme.duracao}}</p>
+
+            <ion-badge color="light" *ngFor="let genero of filme.generos">
+              {{genero}}
+            </ion-badge>
           </div>
         </ion-label>
         <ion-chip color="success" outline>
-          <ion-label>90%</ion-label>
+          <ion-label name="classificacao">{{filme.classificacao}}%</ion-label>
         </ion-chip>
       </ion-item>
       <ion-item-options side="end">
@@ -35,20 +35,19 @@
       </ion-item-options>
     </ion-item-sliding>
 
-    <ion-item-sliding>
+    <!-- <ion-item-sliding>
       <ion-item lines="full">
         <ion-thumbnail slot="start">
           <img
-            src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9PbtCo5IIkd26WPQfZUpPyn6fTz.jpg"
+            src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hES2eVAbVt08JJTqgu3jmI34Yxx.jpg"
           />
         </ion-thumbnail>
         <ion-label class="ion-text-wrap">
           <div class="descricao_informacoes_filmes">
-            <h1>Homem aranha</h1>
-            <p>Sem Volta para Casa</p>
-            <p>16/12/2021-(BR)</p>
-            <p>2h 28m</p>
-            <br />
+            <h1 name="nome">Megalodon</h1>
+            <p name="lancamento">00/00/2018 -(BR)</p>
+            <p name="duracao">1h 26m</p>
+            <p name="generos">Ação, Ficção científica, Terror, Cinema TV</p>
           </div>
         </ion-label>
         <ion-chip color="success" outline>
@@ -60,6 +59,6 @@
           <ion-icon slot="icon-only" name="star"></ion-icon>
         </ion-item-option>
       </ion-item-options>
-    </ion-item-sliding>
+    </ion-item-sliding> -->
   </ion-list>
 </ion-content>

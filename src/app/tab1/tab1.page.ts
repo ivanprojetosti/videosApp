@@ -1,3 +1,4 @@
+import { IFilme } from '../models/IFilme.model';
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
@@ -10,8 +11,30 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+  titulofilme = 'VideosAPP';
+  //LISTAGEM DE FILMES, INFORMAÇÕES DA LISTAGEM VEM DO MODEL IFilmes.model.ts//
 
-  constructor(public alertController: AlertController, public toastController: ToastController) {}
+  listaVideos: IFilme[] = [
+    {
+      nome: 'Homem Aranha',
+      lancamento: '16/12/2021',
+      duracao: '2h 28m',
+      classificacao: 80,
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fVzXp3NwovUlLe7fvoRynCmBPNc.jpg',
+      generos: ['Ação', 'Aventura'],
+    },
+    {
+      nome: 'Megalodon',
+      lancamento: '00/00/2018',
+      duracao: '1h 26m',
+      classificacao: 90,
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hES2eVAbVt08JJTqgu3jmI34Yxx.jpg',
+      generos: ['Ação', 'Ficção', 'científica', 'Terror', 'CinemaTV'],
+    }
+
+  ];
+
+  constructor(public alertController: AlertController, public toastController: ToastController) { }
 
   async exibirALERTA() {
     const alert = await this.alertController.create({
@@ -44,7 +67,7 @@ export class Tab1Page {
     const toast = await this.toastController.create({
       message: 'Filme adicionado aos favoritos',
       duration: 2000,
-      color:'orange'
+      color: 'orange'
     });
     toast.present();
   }
