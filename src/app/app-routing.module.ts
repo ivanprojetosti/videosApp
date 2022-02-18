@@ -8,11 +8,15 @@ const routes: Routes = [
   },
   {
     path: 'mortal-kombat',
-    loadChildren: () => import('./filmes/mortal-kombat/mortal-kombat.module').then( m => m.MortalKombatPageModule)
+    loadChildren: () => import('./filmes/mortal-kombat/mortal-kombat.module').then(m => m.MortalKombatPageModule)
   },
   {
     path: 'liga-justica',
-    loadChildren: () => import('./filmes/liga-justica/liga-justica.module').then( m => m.LigaJusticaPageModule)
+    loadChildren: () => import('./filmes/liga-justica/liga-justica.module').then(m => m.LigaJusticaPageModule)
+  },
+  {
+    path: 'dados-filme',
+    loadChildren: () => import('./dados-filme/dados-filme.module').then( m => m.DadosFilmePageModule)
   }
 ];
 @NgModule({
@@ -21,4 +25,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
